@@ -1,0 +1,25 @@
+---
+title: A demo contract from a public repo
+paths:
+  'GET /data-api/v0/audits':
+    status: deprecated
+  'GET /data-api/v1/audits':
+    description: Returns a list of audits for the current account
+    status: draft
+    authentication: cookie
+    responses:
+      '200':
+        audits:
+          - id: Number [required] 123
+            audited_for: String [optional] Lorem.name
+            created_at: DateTime [required] Lorem.date_time
+            description: String [optional] Lorem.fact
+            lead_auditor: String [optional] Lorem.name
+            presentation_download_password: String [optional] Lorem.password
+            presentation_download_url: String [optional] Lorem.url
+            report_download_password: String [optional] Lorem.password
+            report_download_url: String [optional] Lorem.url
+            review_url: String [optional] https://review-tool.baymard.com/reviews/yEHwJ9EyBLsDr2dyvptH?v=2
+            title: String [optional] Lorem.title
+      '401': no content
+      '404': no content
